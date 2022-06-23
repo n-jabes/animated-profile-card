@@ -16,8 +16,7 @@ body{
 .card{
     position: relative;
     width: 350px;
-    /* height: 190px; */
-    height: 450px;
+    height: 190px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
@@ -25,7 +24,7 @@ body{
 }
 
 .card:hover{
-    height: 450px;
+    height: 400px;
 }
 
 .imgBx{
@@ -36,11 +35,13 @@ body{
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
+    border-radius: 50%;
+    border: 2px solid #ff5acd;
     object-fit: cover;
     overflow: hidden;
     transition: 00.5s;
 }
+
 .imgBx img{
     top: 0;
     left: 0;
@@ -51,4 +52,82 @@ body{
 .card:hover .imgBx{
     height: 200px;
     width: 200px;
+}
+
+.card .content{
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 5%;
+    overflow: hidden;
+}
+
+.card .content .details{
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    transition: 00.5s;
+    transform: translateY(150px);
+}
+
+.card:hover .content .details{
+    transform: translateY(0px);
+}
+
+.card .content .details h2{
+    font-weight: 600;
+    color: #ff5acd;
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+
+.card .content .details h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    color: #555;
+    opacity: 0.5;
+}
+
+.card .content .details .data{
+    display: flex; 
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.card .content .details .data h3{
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.card .content .details .data span{
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+.card .content .details .actiobBtn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .content .details .actionBtn button{
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    background: #ff5f95;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card .content .details .actionBtn button:nth-child(2){
+    border: 1px solid #ff5f95;
+    color: #999;
+    background: #fff;
 }
